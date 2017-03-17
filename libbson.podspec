@@ -9,7 +9,11 @@ Pod::Spec.new do |s|
   s.documentation_url    = "http://mongoc.org/libbson/#{s.version}/index.html"
   s.social_media_url     = "http://twitter.com/mongodb"
   s.source               = { :git => "https://github.com/mongodb/libbson.git", :tag => "#{s.version}" }
-  s.prepare_command      = './autogen.sh && ./configure'
+  s.prepare_command      = <<-CMD
+                            ((command -v automake && command -v glibtoolize) >/dev/null 2>&1 ||
+                             { echo >&2 'Please run `brew install automake libtool`.'; exit 1; }) &&
+                            ./autogen.sh && ./configure
+                           CMD
   s.source_files         = "src/bson/*.{c,h}", "src/yajl/*.{c,h}", "src/jsonsl/*.{c,h}"
   s.exclude_files        = "src/**/*-win32.h"
   s.header_mappings_dir  = "src"
