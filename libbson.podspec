@@ -7,8 +7,7 @@ Pod::Spec.new do |s|
   s.license              = { :type => "Apache License, Version 2.0", :file => "COPYING" }
   s.author               = "MongoDB"
   s.social_media_url     = "http://twitter.com/mongodb"
-  # s.source               = { :git => "https://github.com/mongodb/libbson.git", :tag => "#{s.version}" }
-  s.source               = { :git => "https://github.com/paulmlenikow/libbson.git", :tag => "podspec-#{s.version}" }
+  s.source               = { :git => "https://github.com/mongodb/libbson.git", :tag => "#{s.version}" }
   s.prepare_command      = './autogen.sh && ./configure'
   s.source_files         = "src/bson/*.{c,h}", "src/yajl/*.{c,h}", "src/jsonsl/*.{c,h}"
   s.exclude_files        = "src/**/*-win32.h"
