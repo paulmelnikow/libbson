@@ -17,7 +17,6 @@ Pod::Spec.new do |s|
   s.compiler_flags       = "-DBSON_COMPILATION"
   s.requires_arc         = false
   s.pod_target_xcconfig  = { "HEADER_SEARCH_PATHS" => "$(PODS_TARGET_SRCROOT)/src", "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES" }
-  # user_target_xcconfig is needed for pod lib lint to pass.
   s.user_target_xcconfig = { "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES" }
   s.module_map           = "src/libbson.modulemap"
   s.preserve_paths       = "src/libbson.modulemap"
