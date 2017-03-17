@@ -1,0 +1,6 @@
+framework module bson {
+  umbrella header "bson/bson.h"
+
+  export *
+  module * { export * }
+}
