@@ -2,10 +2,11 @@ Pod::Spec.new do |s|
   s.name                 = "libbson"
   s.version              = "1.6.1"
   s.summary              = "A BSON utility library."
-  s.description          = "https://github.com/mongodb/libbson#libbson"
+  s.description          = "libbson is a library providing useful routines related to building, parsing, and iterating BSON documents."
   s.homepage             = "https://github.com/mongodb/libbson"
   s.license              = { :type => "Apache License, Version 2.0", :file => "COPYING" }
   s.author               = "MongoDB"
+  s.documentation_url    = "http://mongoc.org/libbson/#{s.version}/index.html"
   s.social_media_url     = "http://twitter.com/mongodb"
   s.source               = { :git => "https://github.com/mongodb/libbson.git", :tag => "#{s.version}" }
   s.prepare_command      = './autogen.sh && ./configure'
